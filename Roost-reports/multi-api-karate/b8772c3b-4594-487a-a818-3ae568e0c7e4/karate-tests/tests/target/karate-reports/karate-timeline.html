@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"me_get[1:19]","start":1753080712172,"end":1753080712449,"title":"me_get[1:19] 06:51:52.172-06:51:52.449 Get User Information with API Key Authorization","className":"failed"},{"id":2,"group":1,"content":"me_get[2:34]","start":1753080712452,"end":1753080712711,"title":"me_get[2:34] 06:51:52.452-06:51:52.711 Get User Information with Basic Authorization","className":"failed"},{"id":3,"group":1,"content":"me_get[3:53]","start":1753080712714,"end":1753080712966,"title":"me_get[3:53] 06:51:52.714-06:51:52.966 Get User Information with Query Parameter Authorization","className":"failed"},{"id":4,"group":1,"content":"me_get[4:68]","start":1753080712971,"end":1753080713211,"title":"me_get[4:68] 06:51:52.971-06:51:53.211 Get User Information with Invalid API Key Authorization","className":"failed"},{"id":5,"group":1,"content":"me_get[5:75]","start":1753080713215,"end":1753080713452,"title":"me_get[5:75] 06:51:53.215-06:51:53.452 Get User Information with Invalid Basic Authorization","className":"failed"},{"id":6,"group":1,"content":"me_get[6:87]","start":1753080713457,"end":1753080713709,"title":"me_get[6:87] 06:51:53.457-06:51:53.709 Get User Information with Invalid Query Parameter Authorization"},{"id":7,"group":1,"content":"pet_petId_get[1.1:41]","start":1753080702712,"end":1753080704518,"title":"pet_petId_get[1.1:41] 06:51:42.712-06:51:44.518 Find pet by ID with valid petId using API Key","className":"failed"},{"id":8,"group":1,"content":"pet_petId_get[1.2:42]","start":1753080704527,"end":1753080705301,"title":"pet_petId_get[1.2:42] 06:51:44.527-06:51:45.301 Find pet by ID with valid petId using API Key","className":"failed"},{"id":9,"group":1,"content":"pet_petId_get[1.3:43]","start":1753080705305,"end":1753080706078,"title":"pet_petId_get[1.3:43] 06:51:45.305-06:51:46.078 Find pet by ID with valid petId using API Key","className":"failed"},{"id":10,"group":1,"content":"pet_petId_get[2.1:67]","start":1753080706083,"end":1753080706861,"title":"pet_petId_get[2.1:67] 06:51:46.083-06:51:46.861 Find pet by ID with valid petId using OAuth2","className":"failed"},{"id":11,"group":1,"content":"pet_petId_get[2.2:68]","start":1753080706866,"end":1753080707585,"title":"pet_petId_get[2.2:68] 06:51:46.866-06:51:47.585 Find pet by ID with valid petId using OAuth2","className":"failed"},{"id":12,"group":1,"content":"pet_petId_get[2.3:69]","start":1753080707589,"end":1753080708380,"title":"pet_petId_get[2.3:69] 06:51:47.589-06:51:48.380 Find pet by ID with valid petId using OAuth2","className":"failed"},{"id":13,"group":1,"content":"pet_petId_get[3:71]","start":1753080708384,"end":1753080709108,"title":"pet_petId_get[3:71] 06:51:48.384-06:51:49.108 Find pet by ID with invalid petId using API Key"},{"id":14,"group":1,"content":"pet_petId_get[4:78]","start":1753080709113,"end":1753080709821,"title":"pet_petId_get[4:78] 06:51:49.113-06:51:49.821 Find pet by ID with invalid petId using OAuth2"},{"id":15,"group":1,"content":"pet_petId_get[5:85]","start":1753080709826,"end":1753080710578,"title":"pet_petId_get[5:85] 06:51:49.826-06:51:50.578 Find pet by ID with non-existent petId using API Key"},{"id":16,"group":1,"content":"pet_petId_get[6:92]","start":1753080710582,"end":1753080711305,"title":"pet_petId_get[6:92] 06:51:50.582-06:51:51.305 Find pet by ID with non-existent petId using OAuth2"},{"id":17,"group":1,"content":"products_productId_get[1.1:29]","start":1753080712037,"end":1753080712044,"title":"products_productId_get[1.1:29] 06:51:52.037-06:51:52.044 Find product by ID - Successful","className":"failed"},{"id":18,"group":1,"content":"products_productId_get[1.2:29]","start":1753080712047,"end":1753080712068,"title":"products_productId_get[1.2:29] 06:51:52.047-06:51:52.068 Find product by ID - Successful","className":"failed"},{"id":19,"group":1,"content":"products_productId_get[2:31]","start":1753080712072,"end":1753080712076,"title":"products_productId_get[2:31] 06:51:52.072-06:51:52.076 Find product by ID - Not Found","className":"failed"},{"id":20,"group":1,"content":"products_productId_get[3:36]","start":1753080712079,"end":1753080712082,"title":"products_productId_get[3:36] 06:51:52.079-06:51:52.082 Find product by ID - Not Found","className":"failed"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>
