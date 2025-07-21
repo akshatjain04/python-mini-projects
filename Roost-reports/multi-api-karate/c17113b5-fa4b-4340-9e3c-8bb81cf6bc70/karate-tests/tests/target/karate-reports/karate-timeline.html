@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"me_get[1:18]","start":1753080682145,"end":1753080682171,"title":"me_get[1:18] 06:51:22.145-06:51:22.171 Get User Information with API Key Authorization","className":"failed"},{"id":2,"group":1,"content":"me_get[2:36]","start":1753080682176,"end":1753080682204,"title":"me_get[2:36] 06:51:22.176-06:51:22.204 Get User Information with Basic Authorization","className":"failed"},{"id":3,"group":1,"content":"me_get[3:58]","start":1753080682207,"end":1753080682215,"title":"me_get[3:58] 06:51:22.207-06:51:22.215 Get User Information with Query Parameter Authorization","className":"failed"},{"id":4,"group":1,"content":"me_get[4:76]","start":1753080682219,"end":1753080682224,"title":"me_get[4:76] 06:51:22.219-06:51:22.224 Get User Information with Invalid Authorization","className":"failed"},{"id":5,"group":1,"content":"me_get[5:89]","start":1753080682227,"end":1753080682232,"title":"me_get[5:89] 06:51:22.227-06:51:22.232 Get User Information with Missing Authorization","className":"failed"},{"id":6,"group":1,"content":"pet_petId_get[1.1:34]","start":1753080670999,"end":1753080672783,"title":"pet_petId_get[1.1:34] 06:51:10.999-06:51:12.783 Find pet by ID with valid petId and API Key auth","className":"failed"},{"id":7,"group":1,"content":"pet_petId_get[1.2:34]","start":1753080672795,"end":1753080673585,"title":"pet_petId_get[1.2:34] 06:51:12.795-06:51:13.585 Find pet by ID with valid petId and API Key auth","className":"failed"},{"id":8,"group":1,"content":"pet_petId_get[1.3:34]","start":1753080673592,"end":1753080674365,"title":"pet_petId_get[1.3:34] 06:51:13.592-06:51:14.365 Find pet by ID with valid petId and API Key auth","className":"failed"},{"id":9,"group":1,"content":"pet_petId_get[1.4:34]","start":1753080674371,"end":1753080675116,"title":"pet_petId_get[1.4:34] 06:51:14.371-06:51:15.116 Find pet by ID with valid petId and API Key auth","className":"failed"},{"id":10,"group":1,"content":"pet_petId_get[2.1:51]","start":1753080675131,"end":1753080675923,"title":"pet_petId_get[2.1:51] 06:51:15.131-06:51:15.923 Find pet by ID with valid petId and OAuth2 auth","className":"failed"},{"id":11,"group":1,"content":"pet_petId_get[2.2:51]","start":1753080675928,"end":1753080676677,"title":"pet_petId_get[2.2:51] 06:51:15.928-06:51:16.677 Find pet by ID with valid petId and OAuth2 auth","className":"failed"},{"id":12,"group":1,"content":"pet_petId_get[2.3:51]","start":1753080676683,"end":1753080677433,"title":"pet_petId_get[2.3:51] 06:51:16.683-06:51:17.433 Find pet by ID with valid petId and OAuth2 auth","className":"failed"},{"id":13,"group":1,"content":"pet_petId_get[2.4:51]","start":1753080677438,"end":1753080678194,"title":"pet_petId_get[2.4:51] 06:51:17.438-06:51:18.194 Find pet by ID with valid petId and OAuth2 auth","className":"failed"},{"id":14,"group":1,"content":"pet_petId_get[3.1:64]","start":1753080678200,"end":1753080678946,"title":"pet_petId_get[3.1:64] 06:51:18.200-06:51:18.946 Find pet by ID with invalid petId and API Key auth","className":"failed"},{"id":15,"group":1,"content":"pet_petId_get[4.1:77]","start":1753080678951,"end":1753080679729,"title":"pet_petId_get[4.1:77] 06:51:18.951-06:51:19.729 Find pet by ID with invalid petId and OAuth2 auth","className":"failed"},{"id":16,"group":1,"content":"pet_petId_get[5.1:90]","start":1753080679734,"end":1753080680452,"title":"pet_petId_get[5.1:90] 06:51:19.734-06:51:20.452 Find pet by ID with invalid petId format and API Key auth","className":"failed"},{"id":17,"group":1,"content":"pet_petId_get[6.1:103]","start":1753080680457,"end":1753080681168,"title":"pet_petId_get[6.1:103] 06:51:20.457-06:51:21.168 Find pet by ID with invalid petId format and OAuth2 auth","className":"failed"},{"id":18,"group":1,"content":"products_productId_get[1.1:29]","start":1753080681951,"end":1753080681964,"title":"products_productId_get[1.1:29] 06:51:21.951-06:51:21.964 Find product by ID - Successful","className":"failed"},{"id":19,"group":1,"content":"products_productId_get[1.2:29]","start":1753080681967,"end":1753080681972,"title":"products_productId_get[1.2:29] 06:51:21.967-06:51:21.972 Find product by ID - Successful","className":"failed"},{"id":20,"group":1,"content":"products_productId_get[2:31]","start":1753080681975,"end":1753080681979,"title":"products_productId_get[2:31] 06:51:21.975-06:51:21.979 Find product by ID - Not Found","className":"failed"},{"id":21,"group":1,"content":"products_productId_get[3:36]","start":1753080681982,"end":1753080681986,"title":"products_productId_get[3:36] 06:51:21.982-06:51:21.986 Find product by ID - Not Found","className":"failed"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>
